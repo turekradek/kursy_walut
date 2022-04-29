@@ -1,9 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from random import randint
+import a1
 
 url = 'https://www.nbp.pl/kursy/Archiwum/archiwum_tab_a_2022.csv'
 kursy = pd.read_csv(url, sep=';',encoding='cp1250',index_col='data')
-# print( kursy)
+kursy2 = kursy[1:-3]
+
 def daty(plik):
     url = 'https://www.nbp.pl/kursy/Archiwum/archiwum_tab_a_2022.csv'
     kursy = pd.read_csv(plik, sep=';', encoding='cp1250', index_col='data')
@@ -20,29 +23,38 @@ def waluty_naglowki(plik):
     waluty_nag = waluty_nag[:-3]
     return waluty_nag
 
-def waluty_wybierz_wiersz(plik,wiersz):
-    kursy = pd.read_csv(plik, sep=';', encoding='cp1250')
-    kolumny = kursy.columns.tolist()
-    kolumny = kolumny[:-3]
-    kursy = pd.read_csv(plik, sep=';', encoding='cp1250',usecols=kolumny)
-    numer = kursy[kursy['data']==wiersz].index
-    return kursy.iloc[numer].to_html()
-# print( waluty_wybierz_wiersz(url ,'20220104'))
-# print( waluty_wybierz_wiersz(url,'20220103'))   #DZIALA
-def waluty_wybierz_wartosc(plik,wiersz,kolumna):
-    kursy = pd.read_csv(plik, sep=';', encoding='cp1250')
-    kolumny = kursy.columns.tolist()
-    kolumny = kolumny[:-3]
-    kursy = pd.read_csv(plik, sep=';', encoding='cp1250', usecols=kolumny)
-    numer = kursy[kursy['data'] == wiersz].index
-    return str(kursy.loc[numer][kolumna].tolist()[0])
-print( waluty_wybierz_wartosc(url,'20220104', '1CHF'))
+def waluty_wybierz_wiersz(plik,wiersz='20220104'):
+    kursy = pd.read_csv(plik, sep=';', encoding='cp1250',index_col='data')
+    return kursy.loc[wiersz].to_frame().to_html()
+
+
+
+def waluta_wartosc(plik,wiersz='20220103',waluta='1USD'):
+    kursy = pd.read_csv(plik, sep=';', encoding='cp1250',index_col='data')
+    return  kursy.loc[wiersz][waluta]
+
+
+
 def wykres():
-    dane = [1,2,3,4,5,6,7,8,9]
-    dane2 = [10,20,23,30,40,40,45,39,70]
-    wykres = plt.plot( dane, dane2 )
+    dane_pocz = a1.zmia
+    dane_koniec = kursy2[[]]
+    wykres = plt.plot( dane_pocz, dane_koniec )
     plt.savefig('wykres.png')
     plt.show()
     
+def daty_zalezne(plik, wartosc='03-01-2022'):
+    url = 'https://www.nbp.pl/kursy/Archiwum/archiwum_tab_a_2022.csv'
+    kursy = pd.read_csv(plik, sep=';', encoding='cp1250', index_col='data')
+    daty = kursy.index.tolist()
+    daty.pop(0)
+    daty = [f'{data[-2:]}-{data[4:6]}-{data[:4]}' for data in daty]
+    daty = daty[:-3]
+    gdzie = daty.index(wartosc)
+    lista = daty[gdzie:]
+    return lista
 
+def slownik_1():
+    sl = { chr(65+i): [ str(randint(100,200))  for j in range( 5 ) ]   for i in range( 10 )}
+    return sl
 
+print( kursy2.loc[['20220103','20220104']]['1EUR'] )

@@ -36,9 +36,9 @@ def pokemony_wybierz_wartosc(plik,kolumna, wiersz='Charmander'):
     return str(pok.iloc[numer][kolumna]).split()[1]
 
 def wykres():
-    dane = [1,2,3,4,5,6,7,8,9]
-    dane2 = [10,20,23,30,40,40,45,39,70]
-    wykres = plt.plot( dane, dane2 )
+    os_x = [1,2,3,4,5,6,7,8,9]
+    os_y = [10,20,23,30,40,40,45,39,70]
+    wykres = plt.plot( os_x, os_y )
     plt.savefig('wykres.png')
     plt.show()
 
