@@ -17,16 +17,17 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(40, 30, 400, 31))
         self.label.setStyleSheet("QLabel{\n"
-"    background-color: rgb(202, 202, 202);\n"
+"    background-color: rgb(2, 2, 2);\n"
 "    border: 2px solid;\n"
 "    border-color: rgb(0, 255, 0);\n"
 "    border-radius: 10px;\n"
 "    font-size: 20px;     \n"
 "}\n"
 "QLabel:hover{\n"
-"    background-color:rgb(142, 253, 255);\n"
+# "    background-color:rgb(142, 253, 255);\n"
 "    border: 3px solid;\n"
 "    border-color: rgb(0, 0, 255);\n"
+"   font: rgb(250, 250, 250);\n"
 "\n"
 "}")
         self.label.setObjectName("label")
@@ -34,13 +35,13 @@ class Ui_MainWindow(object):
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(20, 90, 211, 51))
         self.comboBox.setStyleSheet("QComboBox{\n"
-"    background-color: rgb(202, 202, 202);\n"
+"    background-color: rgb(2, 2, 2);\n"
 "    border: 2px solid;\n"
 "    border-color: rgb(0, 255, 0);\n"
 "    font-size: 22px;\n"
 "}\n"
 "QComboBox:hover{\n"
-"    background-color:rgb(142, 253, 255);\n"
+# "    background-color:rgb(142, 253, 255);\n"
 "    border: 3px solid;\n"
 "    border-color: rgb(0, 0, 255);\n"
 "}")
@@ -69,13 +70,13 @@ class Ui_MainWindow(object):
         self.comboBox_2 = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox_2.setGeometry(QtCore.QRect(320, 90, 211, 51))
         self.comboBox_2.setStyleSheet("QComboBox{\n"
-"    background-color: rgb(202, 202, 202);\n"
+"    background-color: rgb(2, 2, 2);\n"
 "    border: 2px solid;\n"
 "    border-color: rgb(0, 255, 0);\n"
 "    font-size: 22px;\n"
 "}\n"
 "QComboBox:hover{\n"
-"    background-color:rgb(142, 253, 255);\n"
+# "    background-color:rgb(142, 253, 255);\n"
 "    border: 3px solid;\n"
 "    border-color: rgb(0, 0, 255);\n"
 "}")
@@ -105,13 +106,13 @@ class Ui_MainWindow(object):
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser.setGeometry(QtCore.QRect(20, 170, 281, 211))
         self.textBrowser.setStyleSheet("QTextBrowser{\n"
-"    background-color: rgb(202, 202, 202);\n"
+"    background-color: rgb(2, 2, 2);\n"
 "    border: 2px solid;\n"
 "    border-color: rgb(0, 255, 0);\n"
 # "    font-size: 22px;\n"
 "}\n"
 "QTextBrowser:hover{\n"
-"    background-color:rgb(142, 253, 255);\n"
+# "    background-color:rgb(142, 253, 255);\n"
 "    border: 3px solid;\n"
 "    border-color: rgb(0, 0, 255);\n"
 "}")
@@ -120,13 +121,13 @@ class Ui_MainWindow(object):
         self.textBrowser_2 = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser_2.setGeometry(QtCore.QRect(320, 170, 281, 211))
         self.textBrowser_2.setStyleSheet("QTextBrowser{\n"
-"    background-color: rgb(202, 202, 202);\n"
+"    background-color: rgb(2, 2, 2);\n"
 "    border: 2px solid;\n"
 "    border-color: rgb(0, 255, 0);\n"
 "    font-size: 22px;\n"
 "}\n"
 "QTextBrowser:hover{\n"
-"    background-color:rgb(142, 253, 255);\n"
+# "    background-color:rgb(142, 253, 255);\n"
 "    border: 3px solid;\n"
 "    border-color: rgb(0, 0, 255);\n"
 "}")
@@ -138,13 +139,13 @@ class Ui_MainWindow(object):
         self.comboBox_pocz_daty = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox_pocz_daty.setGeometry(QtCore.QRect(20, 390, 130, 40))
         self.comboBox_pocz_daty.setStyleSheet("QComboBox{\n"
-                                    "    background-color: rgb(202, 202, 202);\n"
+                                    "    background-color: rgb(2, 2, 2);\n"
                                     "    border: 2px solid;\n"
                                     "    border-color: rgb(0, 255, 0);\n"
                                     "    font-size: 20px;\n"
                                     "}\n"
                                     "QComboBox:hover{\n"
-                                    "    background-color:rgb(142, 253, 255);\n"
+                                    # "    background-color:rgb(142, 253, 255);\n"
                                     "    border: 3px solid;\n"
                                     "    border-color: rgb(0, 0, 255);\n"
                                     "}")
@@ -156,13 +157,13 @@ class Ui_MainWindow(object):
         self.comboBox_koniec_daty = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox_koniec_daty.setGeometry(QtCore.QRect(170, 390, 130, 40))
         self.comboBox_koniec_daty.setStyleSheet("QComboBox{\n"
-                                              "    background-color: rgb(202, 202, 202);\n"
+                                              "    background-color: rgb(2, 2, 2);\n"
                                               "    border: 2px solid;\n"
                                               "    border-color: rgb(0, 255, 0);\n"
                                               "    font-size: 20px;\n"
                                               "}\n"
                                               "QComboBox:hover{\n"
-                                              "    background-color:rgb(142, 253, 255);\n"
+                                            #   "    background-color:rgb(142, 253, 255);\n"
                                               "    border: 3px solid;\n"
                                               "    border-color: rgb(0, 0, 255);\n"
                                               "}")
@@ -182,13 +183,13 @@ class Ui_MainWindow(object):
         self.pushButton_wykres = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.guzik_wykres())
         self.pushButton_wykres.setGeometry(QtCore.QRect(320, 390, 130, 40))
         self.pushButton_wykres.setStyleSheet("QPushButton{\n"
-                                                "    background-color: rgb(202, 202, 202);\n"
+                                                "    background-color: rgb(2, 2, 2);\n"
                                                 "    border: 2px solid;\n"
                                                 "    border-color: rgb(0, 255, 0);\n"
                                                 "    font-size: 20px;\n"
                                                 "}\n"
                                                 "QPushButton:hover{\n"
-                                                "    background-color:rgb(142, 253, 255);\n"
+                                                # "    background-color:rgb(142, 253, 255);\n"
                                                 "    border: 3px solid;\n"
                                                 "    border-color: rgb(0, 0, 255);\n"
                                                 "}")
@@ -198,12 +199,12 @@ class Ui_MainWindow(object):
         self.textBrowser_3 = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser_3.setGeometry(QtCore.QRect(20, 440, 583, 211))
         self.textBrowser_3.setStyleSheet("QTextBrowser{\n"
-                                       "    background-color: rgb(202, 202, 202);\n"
+                                       "    background-color: rgb(2, 2, 2);\n"
                                        "    border: 2px solid;\n"
                                        "    border-color: rgb(0, 255, 0);\n"
                                        "}\n"
                                        "QTextBrowser:hover{\n"
-                                       "    background-color:rgb(142, 253, 255);\n"
+                                    #    "    background-color:rgb(142, 253, 255);\n"
                                        "    border: 3px solid;\n"
                                        "    border-color: rgb(0, 0, 255);\n"
                                        "}")

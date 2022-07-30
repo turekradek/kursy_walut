@@ -63,4 +63,4 @@ def slownik_1():
     sl = { chr(65+i): [ str(randint(100,200))  for j in range( 5 ) ]   for i in range( 10 )}
     return sl
 
-print( kursy2.loc[['20220103','20220104']]['1EUR'] )
+print( kursy2.loc[['20220728','20220729']]['1EUR'] )
