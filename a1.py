@@ -3,7 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import b1
 import c1
 import pandas
-
+# ostatnie zmiany 30 07 2022
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -261,6 +261,7 @@ class Ui_MainWindow(object):
     def zakres_konca_dat(self):
         self.comboBox_koniec_daty.addItems([self.co_ma_poczatek_dat(),'v'])
 
+
     def plik_html(self):
         plik = 'https://www.nbp.pl/kursy/Archiwum/archiwum_tab_a_2022.csv'
         return plik
@@ -271,7 +272,9 @@ class Ui_MainWindow(object):
             f'wybrales wykres daty od \n{self.comboBox_pocz_daty.currentText()} do {self.comboBox_koniec_daty.currentText(),} \n{str(a[0])} {str(a[1])}')
 
         b1.wykres()
-        print( a )
+        # print( a )
+        print('poczatek dat ', self.co_ma_poczatek_dat() )
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

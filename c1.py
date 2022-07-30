@@ -31,6 +31,12 @@ def waluty_wybierz_wiersz(plik,wiersz='20220104'):
 
 def waluta_wartosc(plik,wiersz='20220103',waluta='1USD'):
     kursy = pd.read_csv(plik, sep=';', encoding='cp1250',index_col='data')
+    # print( kursy.loc[wiersz][waluta]  )
+    # df.fillna('', inplace=True)
+    kursy.fillna('waluta nie notowana',inplace=True)
+    # print(kursy.loc[wiersz][waluta])
+    # if kursy.loc[wiersz][waluta] == 'NaN':
+    #     print( ' nie notowany kurs ')
     return  kursy.loc[wiersz][waluta]
 
 

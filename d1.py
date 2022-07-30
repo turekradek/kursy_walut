@@ -29,7 +29,7 @@ def waluty_wybierz_wiersz(plik):
     return kursy['20220104']
 
 
-print(waluty_wybierz_wiersz(url))
+# print(waluty_wybierz_wiersz(url))
 
 
 def wykres():
@@ -40,5 +40,5 @@ def wykres():
     plt.show()
 
 
-print(waluty_naglowki('https://www.nbp.pl/kursy/Archiwum/archiwum_tab_a_2022.csv'))
+# print(waluty_naglowki('https://www.nbp.pl/kursy/Archiwum/archiwum_tab_a_2022.csv'))
 
