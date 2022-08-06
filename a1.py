@@ -241,6 +241,7 @@ class Ui_MainWindow(object):
         data_kon = self.comboBox_koniec_daty.currentText()
         data_pocz = data_pocz[-4:] + data_pocz[3:5] + data_pocz[:2]
         data_kon = data_kon[-4:] + data_kon[3:5] + data_kon[:2]
+        # print(f'plik a1 funkcja zmiana_daty {data_pocz}, {data_kon}')
         return data_pocz, data_kon
 
 
@@ -252,6 +253,7 @@ class Ui_MainWindow(object):
 
 
     def zakres_dat(self):
+        # print(f'plik a1 f zakres_dat {c1.daty( self.plik_html()) } ')
         return c1.daty( self.plik_html() )
 
 
@@ -270,11 +272,15 @@ class Ui_MainWindow(object):
     def guzik_wykres(self):
         a = self.zmiana_data()
         self.textBrowser_3.setText(
-            f'wybrales wykres daty od \n{self.comboBox_pocz_daty.currentText()} do {self.comboBox_koniec_daty.currentText(),} \n{str(a[0])} {str(a[1])}')
+            f'''wybrales wykres daty od \n{self.comboBox_pocz_daty.currentText()} do {self.comboBox_koniec_daty.currentText(),} \n{str(a[0])} {str(a[1])}\n
+            ''')
 
-        b1.wykres()
+        b1.wykres([1,2,3,4],[10,20,30,40])
+        print( f'a1 funkcja guzik_wykres {a}' )
+        return a
         # print( a )
-        print('poczatek dat ', self.co_ma_poczatek_dat() )
+        # print('poczatek dat ', self.comboBox_koniec_daty() )
+        # print('koniec dat ', self.comboBox_koniec_daty() )
 
 
     def retranslateUi(self, MainWindow):

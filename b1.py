@@ -1,6 +1,9 @@
 from random import randint
 import pandas as pd
 import matplotlib.pyplot as plt
+
+import a1 
+
 def wyrazy():
     lista = []
     for i in range( randint( 5,10)):
@@ -35,13 +38,12 @@ def pokemony_wybierz_wartosc(plik,kolumna, wiersz='Charmander'):
     numer = pok[pok['Name'] == wiersz].index
     return str(pok.iloc[numer][kolumna]).split()[1]
 
-def wykres():
-    os_x = [1,2,3,4,5,6,7,8,9]
-    os_y = [10,20,23,30,40,40,45,39,70]
+def wykres(os_x,os_y):
+    # os_x = [1,2,3,4,5,6,7,8,9]
+    # os_y = [10,20,23,30,40,40,45,39,70]
     wykres = plt.plot( os_x, os_y )
     plt.savefig('wykres.png')
     plt.show()
-
 
 
 # plik = 'pokemon.csv'
